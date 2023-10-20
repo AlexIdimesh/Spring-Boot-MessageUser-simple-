@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"/>
+<html>
+<head>
+    <title>Main Page</title>
+</head>
+<body>
+<h1>Main Page</h1>
+
+<h2>Фильтр по отправителю:</h2>
+<form action="/messages/filter" method="post">
+    <input type="text" id="senderFilter" name="senderFilter" placeholder="Имя отправителя">
+    <button type="submit">Применить фильтр</button>
+</form>
+
+<h2>Добавить новое сообщение:</h2>
+<form action="/messages/add" method="post">
+    <input type="text" id="text" name="text" placeholder="Текст сообщения">
+    <button type="submit">Добавить</button>
+</form>
+</body>
+</html>

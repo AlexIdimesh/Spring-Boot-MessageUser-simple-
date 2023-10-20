@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog.yaml
+                       - changeSet:
+                       id: 1
+                       author: Sasha
+                       changes:
+                         - createTable:
+                             tableName: message
+                             columns:
+                               - column:
+                                   name: message_id
+                                   type: BIGINT
+                                   autoIncrement: true
+                                   constraints:
+                                     primaryKey: true
+                                     nullable: false
+                               - column:
+                                   name: message_name
+                                   type: varchar(50)
+                                   constraints:
+                                     unique: true
+                                     nullable: false
+                               - column:
+                                   name: message_message
+                                   type: varchar(512)
+                                   constraints:
+                                     nullable: false
+                              
