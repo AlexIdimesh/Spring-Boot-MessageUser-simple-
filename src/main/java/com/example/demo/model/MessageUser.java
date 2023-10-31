@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Size;
 import jdk.jfr.Name;
 import lombok.Getter;
@@ -11,6 +12,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "message")
 @Entity
+
 public class MessageUser {
     @Id
     @Column(name = "message_id")
@@ -20,6 +22,11 @@ public class MessageUser {
     @Column(name = "message_username")
     @Size(min = 1, max = 50)
     private String name;
+
+    @Column(name = "message_password")
+    @NonNull
+    @Size(min = 1,max = 20)
+    private String password;
 
     @Column(name = "message_message")
     @Size(max = 10000)
